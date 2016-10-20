@@ -66,10 +66,6 @@ bindkey '^@' push-line # ctrl-space
 export LC_ALL="en_US.UTF-8"
 
 #alias tmux="tmux -2"
-## keychain
-keychain
-# source virtualenvwrapper
-#source /usr/local/bin/virtualenvwrapper.sh
 
 # http://hmarr.com/2010/jan/19/making-virtualenv-play-nice-with-git/
 # Automatically activate Git projects' virtual environments based on the
@@ -104,12 +100,6 @@ function venv_cd {
 alias cd="venv_cd"
 
 xset r rate 200 50
-
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
-alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
-
-PERL_MB_OPT="--install_base \"/home/kristoffer/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/kristoffer/perl5"; export PERL_MM_OPT;
 
 case $TERM in
   (*xterm* | rxvt)

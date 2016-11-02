@@ -1,6 +1,6 @@
 
 # completion
-autoload -U compinit
+autoload -Uz compinit
 autoload run-help
 compinit
 
@@ -17,13 +17,16 @@ setopt APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
 
+# Don't allow overwriting of existing files without using >!
+setopt NOCLOBBER
+
 # keep TONS of history
 HISTSIZE=4096
 SAVEHIST=4096
 HISTFILE=~/.zsh_history
 
 # Try to correct command line spelling
-setopt CORRECT CORRECT_ALL
+setopt CORRECT #CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
@@ -117,3 +120,16 @@ case $TERM in
 
   ;;
 esac
+
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
+# if the init scipt doesn't exist
+if ! zgen saved; then
+    # specify plugins here
+    zgen load miekg/lean
+    # completions
+    zgen load zsh-users/zsh-completions src
+    zgen load zsh-users/zsh-autosuggestions
+    # generate the init script from plugins above
+    zgen save
+fi

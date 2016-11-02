@@ -16,6 +16,7 @@ setopt histignoredups
 setopt APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
+setopt noflowcontrol # NO MORE C-S/C-Q freezing bullshit
 
 # Don't allow overwriting of existing files without using >!
 setopt NOCLOBBER

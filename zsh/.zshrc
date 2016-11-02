@@ -130,6 +130,7 @@ if ! zgen saved; then
     # completions
     zgen load zsh-users/zsh-completions src
     zgen load zsh-users/zsh-autosuggestions
+    zgen load chrissicool/zsh-256color
     # generate the init script from plugins above
     zgen save
 fi

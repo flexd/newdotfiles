@@ -43,3 +43,5 @@
 	up = "!git remote update -p; git merge --ff-only @{u}"
 [credential]
 	helper = cache
+[push]
+	default = simple

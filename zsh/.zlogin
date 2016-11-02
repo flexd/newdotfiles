@@ -119,6 +119,3 @@ function virtualenv_prompt_info() {
         echo "$ZSH_THEME_VIRTUAL_ENV_PROMPT_PREFIX$name$ZSH_THEME_VIRTUAL_ENV_PROMPT_SUFFIX"
     fi
 }
-# prompt
-#export PROMPT='[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] $vcs_info_msg_0_ '
-#export RPROMPT='$(virtualenv_prompt_info)'

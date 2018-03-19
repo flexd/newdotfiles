@@ -103,7 +103,7 @@ function venv_cd {
 
 alias cd="venv_cd"
 
-xset r rate 200 50
+#xset r rate 200 50
 
 case $TERM in
   (*xterm* | rxvt)

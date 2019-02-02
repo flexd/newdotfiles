@@ -119,3 +119,4 @@ function virtualenv_prompt_info() {
         echo "$ZSH_THEME_VIRTUAL_ENV_PROMPT_PREFIX$name$ZSH_THEME_VIRTUAL_ENV_PROMPT_SUFFIX"
     fi
 }
+xrandr --dpi 220

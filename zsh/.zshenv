@@ -1,5 +1,5 @@
 # load scripts from .bin
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/betaflight_configurator:$PATH"
 
 # setup go
 export GOPATH=$HOME/code/go

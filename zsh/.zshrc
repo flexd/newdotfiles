@@ -103,7 +103,7 @@ function venv_cd {
 
 alias cd="venv_cd"
 
-xset r rate 200 50
+#xset r rate 200 50
 
 case $TERM in
   (*xterm* | rxvt)
@@ -127,12 +127,12 @@ source "${HOME}/.zgen/zgen.zsh"
 # if the init scipt doesn't exist
 if ! zgen saved; then
     # specify plugins here
-    zgen load miekg/lean
+    zgen load ~/.zsh/bundles/miekg/lean/lean.plugin.zsh
     # completions
-    zgen load zsh-users/zsh-completions src
-    zgen load zsh-users/zsh-autosuggestions
+    zgen load ~/.zsh/bundles/zsh-users/zsh-completions/zsh-completions.plugin.zsh
+    zgen load ~/.zsh/bundles/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
     zgen load ~/.zsh/plugins/gpg-agent.plugin.zsh
-    zgen load chrissicool/zsh-256color
+    zgen load ~/.zsh/bundles/chrissicool/zsh-256color
     # generate the init script from plugins above
     zgen save
 fi

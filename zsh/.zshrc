@@ -136,3 +136,5 @@ if ! zgen saved; then
     # generate the init script from plugins above
     zgen save
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

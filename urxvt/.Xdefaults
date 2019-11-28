@@ -1,0 +1,9 @@
+urxvt*background: black
+urxvt*foreground: white
+urxvt*scrollBar: false
+urxvt*font: xft:Terminus:style=Regular:size=14
+urxvt*boldFont: xft:Terminus:style=Bold:size=14
+urxvt*color4: #34aeeb
+urxvt*color12: #34d2eb
+urxvt*iso14755: false
+urxvt*iso14755_52: false

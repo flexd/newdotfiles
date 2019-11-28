@@ -45,7 +45,7 @@ bindsym $mod+y border 1pixel
 bindsym $mod+u border none
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtcd
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -136,7 +136,7 @@ bindsym $mod+Print exec scrot -s -e 'mv $f ~/Pictures/screenshots/'
 bindsym $mod+1 workspace number "1 irc"
 bindsym $mod+2 workspace number "2 www"
 bindsym $mod+3 workspace number "3 misc"
-bindsym $mod+4 workspace number 4 
+bindsym $mod+4 workspace number 4
 bindsym $mod+5 workspace number 5
 bindsym $mod+6 workspace number 6
 bindsym $mod+7 workspace number 7

@@ -10,3 +10,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 #export TERM='xterm-256color'
 [ -f .zshenv.local ] && source .zshenv.local
+source "$HOME/.cargo/env"

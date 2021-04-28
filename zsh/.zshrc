@@ -75,33 +75,33 @@ export LC_ALL="en_US.UTF-8"
 # Automatically activate Git projects' virtual environments based on the
 # directory name of the project. Virtual environment name can be overridden
 # by placing a .venv file in the project root with a virtualenv name in it
-function workon_cwd {
-    # Check that this is a Git repo
-    GIT_DIR=`git rev-parse --git-dir 2> /dev/null`
-    if [ $? == 0 ]; then
-        # Find the repo root and check for virtualenv name override
-        GIT_DIR=`\cd $GIT_DIR; pwd`
-        PROJECT_ROOT=`dirname "$GIT_DIR"`
-        ENV_NAME=`basename "$PROJECT_ROOT"`
-        # Activate the environment only if it is not already active
-        if [ "$VIRTUAL_ENV" != "$PROJECT_ROOT/venv" ]; then
-            if [ -e "$PROJECT_ROOT/venv/bin/activate" ]; then
-                source "$PROJECT_ROOT/venv/bin/activate" && export CD_VIRTUAL_ENV="$ENV_NAME"
-            fi
-        fi
-    elif [ $CD_VIRTUAL_ENV ]; then
-        # We've just left the repo, deactivate the environment
-        # Note: this only happens if the virtualenv was activated automatically
-        deactivate && unset CD_VIRTUAL_ENV
-    fi
-}
-
-# New cd function that does the virtualenv magic
-function venv_cd {
-    cd "$@" && workon_cwd
-}
-
-alias cd="venv_cd"
+# function workon_cwd {
+#     # Check that this is a Git repo
+#     GIT_DIR=`git rev-parse --git-dir 2> /dev/null`
+#     if [ $? == 0 ]; then
+#         # Find the repo root and check for virtualenv name override
+#         GIT_DIR=`\cd $GIT_DIR; pwd`
+#         PROJECT_ROOT=`dirname "$GIT_DIR"`
+#         ENV_NAME=`basename "$PROJECT_ROOT"`
+#         # Activate the environment only if it is not already active
+#         if [ "$VIRTUAL_ENV" != "$PROJECT_ROOT/venv" ]; then
+#             if [ -e "$PROJECT_ROOT/venv/bin/activate" ]; then
+#                 source "$PROJECT_ROOT/venv/bin/activate" && export CD_VIRTUAL_ENV="$ENV_NAME"
+#             fi
+#         fi
+#     elif [ $CD_VIRTUAL_ENV ]; then
+#         # We've just left the repo, deactivate the environment
+#         # Note: this only happens if the virtualenv was activated automatically
+#         deactivate && unset CD_VIRTUAL_ENV
+#     fi
+# }
+#
+# # New cd function that does the virtualenv magic
+# function venv_cd {
+#     cd "$@" && workon_cwd
+# }
+#
+# alias cd="venv_cd"
 
 #xset r rate 200 50
 

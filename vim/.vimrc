@@ -137,3 +137,5 @@ function! s:StripTrailing()
   %s/\s\+$//e
   call cursor(l, c)
 endfunction
+
+inoreabbrev <expr> TODO "TODO(".expand("$USER").",".strftime("%F")."):"

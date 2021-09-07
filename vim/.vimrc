@@ -8,14 +8,14 @@ set rtp+=~/.vim/bundle/fzf.vim
 nnoremap <leader>f :FZF<CR>
 
 call plug#begin('~/.vim/plugged')
-"Plug 'drewtempelmeyer/palenight.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'rakr/vim-one'
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/webapi-vim'
-Plug 'vim-syntastic/syntastic'
+"Plug 'vim-syntastic/syntastic'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 Plug 'bling/vim-airline'
@@ -26,6 +26,9 @@ Plug 'roxma/nvim-yarp'
 Plug 'Chiel92/vim-autoformat'
 Plug 'mhinz/vim-signify'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'Valloric/ListToggle'
+let g:lt_location_list_toggle_map = '<leader>l'
+let g:lt_quickfix_list_toggle_map = '<leader>q'
 
 " enable ncm2 for all buffers
 "autocmd BufEnter * call ncm2#enable_for_buffer()
